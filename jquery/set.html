@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <p id="test1">This is paragraph</p>
+    <p id="test2">This is paragraph</p>
+    <p>Input fiels: <input type="text" id="test3" value="Mickey Mouse" </p>
+        <button id="btn1">setText</button>
+        <button id="btn2">setHtml</button>
+        <button id="btn3">setValue</button>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $("#test1").text("Hell Word");
+        });
+        $("#btn2").click(function () {
+            $("#test2").html("<b> Hello Word</b>");
+        });
+        $("#btn1").click(function () {
+            $("#test1").val("Hell Word");
+        });
+    })
+</script>
+
+</html>

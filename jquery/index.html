@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <style>
+        img {
+            width: 300px;
+            display: none;
+        }
+
+        .container {
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px 10px;
+            font-size: 20px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            border-radius: 50%;
+            border: 10px solid red;
+            margin-top: 30px;
+            position: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="show">Show</button>
+        <button id="hide">Hide</button>
+        <button id="toggle">Toggle</button>
+
+    </div>
+    <img src="./image/cat.jpg" alt="" id="img">
+    <div class="container">
+        <button class="animationBtn">Annimation</button>
+        <div class="box"></div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function () {
+        $("#show").click(function () {
+            $("#img").show(1000);
+        });
+
+        $("#hide").click(function () {
+            $("#img").hide(1000);
+        });
+
+        $("#toggle").click(function () {
+            $("#img").toggle(1000);
+        });
+        $(".animationBtn").click(function () {
+            $(".box").animate({
+                left: "300px",
+                top: "300px",
+            },
+                3000,
+                function () {
+                    $("#img").show(1000);
+                }
+            );
+
+        });
+
+    });
+</script>
+
+</html>
